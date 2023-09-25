@@ -1,5 +1,0 @@
-raw: "data/raw/"
-interim: "data/interim/"
-processed: "data/processed/"
-artifact: "artifacts/"
-udf: "src"

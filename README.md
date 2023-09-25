@@ -1,22 +1,30 @@
-# Data Science Template
-A base template for your basic data science / data analysis project.
+# {{cookiecutter.project_name}}
 
-This is a simple version of [the cookiecutter template](https://drivendata.github.io/cookiecutter-data-science/).
+{{cookiecutter.project_short_description}}
 
-## Quickstart
-Install the latest [Cookiecutter](https://cookiecutter.readthedocs.io/en/stable/) to use this template (requires Cookiecutter 2.1.0 or higher)
+## Setup
 
-```
-pip install -U cookiecutter 
-```
-
-Run the following script to generate the template for the project in your terminal or command prompt.
+Start the project with environment setup and run the jupyterlab
 
 ```
-cookiecutter https://github.com/alamhanz/data_science_template.git --checkout <tag>
+pip install virtualenv
+virtualenv {{cookiecutter.venv_name}}
+source {{cookiecutter.venv_name}}/bin/activate
+pip install -r requirements.txt
+jupyter lab
 ```
-
-Then, follow the template as needed.
+or run this script for windows users
+```
+pip install virtualenv
+virtualenv {{cookiecutter.venv_name}}
+.\{{cookiecutter.venv_name}}\Scripts\activate
+pip install -r requirements.txt
+jupyter lab
+```
+additional command to add kernel to jupyter
+```
+ipython kernel install --name [env-name] --user
+```
 
 ## Structure
 
@@ -33,3 +41,5 @@ Then, follow the template as needed.
         |--figures
     |--src
 ```
+
+
